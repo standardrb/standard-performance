@@ -1,9 +1,4 @@
 PATH
-  remote: ../lint_roller
-  specs:
-    lint_roller (1.0.0)
-
-PATH
   remote: .
   specs:
     standard-performance (1.0.0)
@@ -16,6 +11,7 @@ GEM
     ast (2.4.2)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
+    lint_roller (1.0.0)
     m (1.6.1)
       method_source (>= 0.6.7)
       rake (>= 0.9.2.2)
@@ -55,11 +51,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  lint_roller!
   m
   minitest
   rake
-  rubocop (~> 1.48.1)
   standard
   standard-performance!
 
