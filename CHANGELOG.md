@@ -1,4 +1,4 @@
-## [Unreleased]
+## [1.1.0]
 
 - Updates rubocop-performance from 1.16.0 to 1.18.0
 - Updates past the circular dependency in an older version of standardrb for development.
