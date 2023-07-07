@@ -1,3 +1,7 @@
+## [1.1.1]
+
+- Preserve metadata from rubocop-performance by merging it
+
 ## [1.1.0]
 
 - Updates rubocop-performance from 1.16.0 to 1.18.0
