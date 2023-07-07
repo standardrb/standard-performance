@@ -32,6 +32,16 @@ class Standard::PerformanceTest < Minitest::Test
     assert_equal extra, [], "These cops do not exist and should not be configured in #{BASE_CONFIG}"
   end
 
+  def test_merges_in_the_metadata_from_rubocop_performance
+    owned_yaml = YAML.load_file(BASE_CONFIG)
+    @subject = Standard::Performance::Plugin.new({})
+
+    rules = @subject.rules(LintRoller::Context.new(target_ruby_version: RUBY_VERSION))
+
+    assert_nil owned_yaml["Performance/AncestorsInclude"]["Description"], "The description should be inherited from rubocop-performance"
+    assert_equal "Use `A <= B` instead of `A.ancestors.include?(B)`.", rules.value["Performance/AncestorsInclude"]["Description"]
+  end
+
   def test_does_not_require_rubocop_performance_and_change_the_default_rubocop_config
     @subject = Standard::Performance::Plugin.new({})
 

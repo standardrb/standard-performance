@@ -1,7 +1,11 @@
+require_relative "determines_yaml_path"
+
 module Standard::Performance
   class Plugin < LintRoller::Plugin
     def initialize(config)
       @config = config
+      @merges_upstream_metadata = LintRoller::Support::MergesUpstreamMetadata.new
+      @determines_yaml_path = DeterminesYamlPath.new
     end
 
     def about
@@ -20,10 +24,15 @@ module Standard::Performance
     def rules(context)
       trick_rubocop_into_thinking_we_required_rubocop_performance!
 
+      rules = @merges_upstream_metadata.merge(
+        YAML.load_file(@determines_yaml_path.determine(context.target_ruby_version)),
+        YAML.load_file(Pathname.new(Gem.loaded_specs["rubocop-performance"].full_gem_path).join("config/default.yml"))
+      )
+
       LintRoller::Rules.new(
-        type: :path,
+        type: :object,
         config_format: :rubocop,
-        value: determine_yaml_path(context.target_ruby_version)
+        value: rules
       )
     end
 
@@ -46,29 +55,6 @@ module Standard::Performance
       require "rubocop"
       require "rubocop/cop/performance_cops"
       RuboCop::ConfigLoader.default_configuration.loaded_features.add("rubocop-performance")
-    end
-
-    def determine_yaml_path(desired_version)
-      desired_version = Gem::Version.new(desired_version) unless desired_version.is_a?(Gem::Version)
-      default = "base.yml"
-
-      file_name = if !Gem::Version.correct?(desired_version)
-        default
-      elsif desired_version < Gem::Version.new("1.9")
-        "ruby-1.8.yml"
-      elsif desired_version < Gem::Version.new("2.0")
-        "ruby-1.9.yml"
-      elsif desired_version < Gem::Version.new("2.1")
-        "ruby-2.0.yml"
-      elsif desired_version < Gem::Version.new("2.2")
-        "ruby-2.1.yml"
-      elsif desired_version < Gem::Version.new("2.3")
-        "ruby-2.2.yml"
-      else
-        default
-      end
-
-      Pathname.new(__dir__).join("../../../config/#{file_name}")
     end
   end
 end
