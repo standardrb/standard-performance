@@ -1,3 +1,8 @@
+## [1.1.2]
+
+- Fix inheritance of YAML files when specifying an unsupported Ruby
+[standard#573](https://github.com/standardrb/standard/issues/573)
+
 ## [1.1.1]
 
 - Preserve metadata from rubocop-performance by merging it
