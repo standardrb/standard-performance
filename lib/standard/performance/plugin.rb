@@ -1,11 +1,10 @@
-require_relative "determines_yaml_path"
+require_relative "builds_ruleset"
 
 module Standard::Performance
   class Plugin < LintRoller::Plugin
     def initialize(config)
       @config = config
-      @merges_upstream_metadata = LintRoller::Support::MergesUpstreamMetadata.new
-      @determines_yaml_path = DeterminesYamlPath.new
+      @builds_ruleset = BuildsRuleset.new
     end
 
     def about
@@ -24,15 +23,10 @@ module Standard::Performance
     def rules(context)
       trick_rubocop_into_thinking_we_required_rubocop_performance!
 
-      rules = @merges_upstream_metadata.merge(
-        YAML.load_file(@determines_yaml_path.determine(context.target_ruby_version)),
-        YAML.load_file(Pathname.new(Gem.loaded_specs["rubocop-performance"].full_gem_path).join("config/default.yml"))
-      )
-
       LintRoller::Rules.new(
         type: :object,
         config_format: :rubocop,
-        value: rules
+        value: @builds_ruleset.build(context.target_ruby_version)
       )
     end
 
