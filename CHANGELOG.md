@@ -1,7 +1,7 @@
 ## [1.1.2]
 
 - Fix inheritance of YAML files when specifying an unsupported Ruby
-[standard#573](https://github.com/standardrb/standard/issues/573)
+[#11](https://github.com/standardrb/standard-performance/issues/11)
 
 ## [1.1.1]
 
