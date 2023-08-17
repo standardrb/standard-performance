@@ -1,3 +1,8 @@
+## Unreleased
+
+- Updates rubocop-performance from 1.18.0 to 1.19.0
+  - Leaves the new rule MapMethodChain disabled.
+
 ## [1.1.2]
 
 - Fix inheritance of YAML files when specifying an unsupported Ruby
