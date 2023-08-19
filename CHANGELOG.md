@@ -1,4 +1,4 @@
-## Unreleased
+## [1.2.0]
 
 - Updates rubocop-performance from 1.18.0 to 1.19.0
   - Leaves the new rule MapMethodChain disabled.

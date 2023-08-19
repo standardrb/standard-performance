@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    standard-performance (1.1.2)
+    standard-performance (1.2.0)
       lint_roller (~> 1.1)
       rubocop-performance (~> 1.19.0)
 
