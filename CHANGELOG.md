@@ -1,3 +1,7 @@
+## Unreleased
+
+- Updates rubocop-performance from 1.19.0 to [1.19.1](https://github.com/rubocop/rubocop-performance/releases/tag/v1.19.1)
+
 ## [1.2.0]
 
 - Updates rubocop-performance from 1.18.0 to 1.19.0
