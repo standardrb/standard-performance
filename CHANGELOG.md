@@ -1,4 +1,4 @@
-## Unreleased
+## [1.3.0]
 
 - Updates rubocop-performance from 1.19.1 to [1.20.1](https://github.com/rubocop/rubocop-performance/releases/tag/v1.20.1)
 
