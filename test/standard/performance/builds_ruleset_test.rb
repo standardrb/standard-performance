@@ -1,8 +1,5 @@
 require "test_helper"
 
-# Remove after 2.7 is dropped
-return unless RUBY_VERSION > "3"
-
 module Standard::Performance
   class BuildsRulesetTest < Minitest::Test
     def setup

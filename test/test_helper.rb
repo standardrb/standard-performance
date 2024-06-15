@@ -3,15 +3,12 @@ require "standard/performance"
 
 require "minitest/autorun"
 
-# Remove branch after 2.7 is dropped
-if RUBY_VERSION > "3"
-  require "mocktail"
+require "mocktail"
 
-  class Minitest::Test
-    include Mocktail::DSL
+class Minitest::Test
+  include Mocktail::DSL
 
-    def teardown
-      Mocktail.reset
-    end
+  def teardown
+    Mocktail.reset
   end
 end
