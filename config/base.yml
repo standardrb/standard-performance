@@ -11,7 +11,7 @@ Performance/BindCall:
   Enabled: true
 
 Performance/BlockGivenWithExplicitBlock:
-  Enabled: true
+  Enabled: false
 
 Performance/Caller:
   Enabled: true
