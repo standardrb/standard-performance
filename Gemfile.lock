@@ -9,6 +9,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    docile (1.4.1)
     json (2.8.1)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
@@ -44,6 +45,12 @@ GEM
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.1)
+    simplecov_json_formatter (0.1.4)
     sorbet-eraser (0.3.1)
     sorbet-runtime (0.5.11435)
     standard (1.41.1)
@@ -67,6 +74,7 @@ DEPENDENCIES
   minitest
   mocktail
   rake
+  simplecov
   standard
   standard-performance!
 
