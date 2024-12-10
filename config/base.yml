@@ -130,6 +130,9 @@ Performance/Squeeze:
 Performance/StartWith:
   Enabled: true
 
+Performance/StringBytesize:
+  Enabled: true
+
 Performance/StringIdentifierArgument:
   Enabled: true
 
