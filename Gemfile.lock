@@ -3,7 +3,7 @@ PATH
   specs:
     standard-performance (1.5.0)
       lint_roller (~> 1.1)
-      rubocop-performance (~> 1.22.0)
+      rubocop-performance (~> 1.23.0)
 
 GEM
   remote: https://rubygems.org/
@@ -41,7 +41,7 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.34.1)
       parser (>= 3.3.1.0)
-    rubocop-performance (1.22.1)
+    rubocop-performance (1.23.0)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     ruby-progressbar (1.13.0)
