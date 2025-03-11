@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "lint_roller", "~> 1.1"
-  spec.add_dependency "rubocop-performance", "~> 1.23.0"
+  spec.add_dependency "rubocop-performance", "~> 1.24.0"
 end
