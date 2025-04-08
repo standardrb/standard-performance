@@ -1,3 +1,7 @@
+## Unreleased
+
+- Updates rubocop-performance from 1.24.0 to [1.25.0](https://github.com/rubocop/rubocop-performance/releases/tag/v1.25.0)
+
 ## 1.7.0
 
 - Updates rubocop-performance from 1.23.0 to [1.24.0](https://github.com/rubocop/rubocop-performance/releases/tag/v1.24.0)
