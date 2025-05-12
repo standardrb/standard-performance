@@ -81,7 +81,7 @@ DEPENDENCIES
   mocktail
   rake
   simplecov
-  standard (~> 1.36)
+  standard
   standard-performance!
 
 BUNDLED WITH
