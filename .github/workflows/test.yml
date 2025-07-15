@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy: {matrix: {ruby: [ '3.0', '3.1', '3.2', '3.3', '3.4' ]}}
+    strategy: {matrix: {ruby: [ '3.0', 3.1, 3.2, 3.3, 3.4 ]}}
     steps:
       - uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
         with: { egress-policy: audit }
