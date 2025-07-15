@@ -4,6 +4,7 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule: [ cron: "42 0 7 * *" ] # https://crontab.guru/#42_0_7_*_*
 
 jobs:
   test:
