@@ -3,14 +3,14 @@ PATH
   specs:
     standard-performance (1.8.0)
       lint_roller (~> 1.1)
-      rubocop-performance (~> 1.25.0)
+      rubocop-performance (>= 1.25, < 1.27)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
     docile (1.4.1)
-    json (2.13.2)
+    json (2.15.1)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     m (1.6.1)
@@ -25,7 +25,7 @@ GEM
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
-    prism (1.5.1)
+    prism (1.6.0)
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.3.0)
@@ -41,13 +41,13 @@ GEM
       rubocop-ast (>= 1.46.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.46.0)
+    rubocop-ast (1.47.1)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
-    rubocop-performance (1.25.0)
+    rubocop-performance (1.26.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.75.0, < 2.0)
-      rubocop-ast (>= 1.38.0, < 2.0)
+      rubocop-ast (>= 1.47.1, < 2.0)
     ruby-progressbar (1.13.0)
     simplecov (0.22.0)
       docile (~> 1.1)
