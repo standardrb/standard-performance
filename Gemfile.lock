@@ -3,7 +3,7 @@ PATH
   specs:
     standard-performance (1.8.0)
       lint_roller (~> 1.1)
-      rubocop-performance (>= 1.25, < 1.27)
+      rubocop-performance (~> 1.26.0)
 
 GEM
   remote: https://rubygems.org/
